@@ -4,6 +4,10 @@ html, body, #app, #container {
 	height: 100%;
 }
 
-#container {
+#container > div {
 	background: $lightestBlue;
+}
+
+label {
+	font-weight: normal;
 }
