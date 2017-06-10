@@ -19,6 +19,7 @@
     "babel-polyfill": "^6.23.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -28,6 +29,7 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.5",
     "toastr": "^2.1.2"
   },
   "devDependencies": {
