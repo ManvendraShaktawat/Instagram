@@ -5,7 +5,7 @@ class InputField extends React.Component {
 	return (
 			<div className="form-group">
 				<label htmlFor={this.props.name}>{this.props.label}</label>
-				<input type={this.props.type} className="form-control" id={this.props.name} placeholder={this.props.placeholder} name={this.props.name} />
+				<input type={this.props.type} ref={(el)=>{this.props.parentContext[this.props.name] = el;}} className="form-control" id={this.props.name} placeholder={this.props.placeholder} name={this.props.name} />
 			</div>
 		);
 	}
