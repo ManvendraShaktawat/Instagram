@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./app.scss";
 
 class App extends React.Component {
 	render() {
 		return(
-			<div>
+			<div id="container">
 				<div>
 					{this.props.children}
 				</div>
