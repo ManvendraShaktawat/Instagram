@@ -1,0 +1,9 @@
+@import "./variables.scss";
+
+html, body, #app, #container {
+	height: 100%;
+}
+
+#container {
+	background: $lightestBlue;
+}
