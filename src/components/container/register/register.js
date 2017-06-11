@@ -1,4 +1,7 @@
 import React from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as actions from "../../../actions";
 import InputField from "../../presentational/inputField/inputField";
 import * as userUrl from "../../../constants/apiNames";
 import "./register.scss";
@@ -20,9 +23,11 @@ class Register extends React.Component {
       dob: this.dateOfBirth.value,
       mobileNumber: this.phoneNumber.value
     };
-    console.log(userUrl)
 
-    this.props.actions.postData(userData, userUrl.apiNames.USERS);
+    this.props.actions.post(userData, userUrl.apiNames.USERS)
+      .then(() => {
+        this.props.history.push("/home");
+      });
   }
 
   render() {
@@ -128,4 +133,16 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
