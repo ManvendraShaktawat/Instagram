@@ -8,3 +8,9 @@ export function post(data, url) {
 		return service("POST", data, url);
 	};
 }
+
+export function get(url) {
+	return function () {
+		return service("GET", null, url);
+	};
+}

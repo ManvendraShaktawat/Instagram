@@ -20,9 +20,8 @@ class Register extends React.Component {
       dob: this.dateOfBirth.value,
       mobileNumber: this.phoneNumber.value
     };
-    console.log(userUrl)
 
-    this.props.actions.postData(userData, userUrl.apiNames.USERS);
+    this.props.actions.post(userData, userUrl.apiNames.USERS);
   }
 
   render() {
