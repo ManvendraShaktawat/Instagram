@@ -1,4 +1,7 @@
 import React from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as actions from "../../../actions";
 import InputField from "../../presentational/inputField/inputField";
 import * as userUrl from "../../../constants/apiNames";
 import "./login.scss";
@@ -12,8 +15,14 @@ class Login extends React.Component {
 
   getLoginData(event) {
     event.preventDefault();
-    this.props.actions.getData(userUrl.apiNames.USERS+"/"+this.email.value)
-      .then(() => this.props.history.push("/home"));
+    this.props.actions.get(userUrl.apiNames.USERS+"/"+this.email.value+"/"+this.pwd.value)
+      .then((res) => {
+        if(res.error) {
+          console.log(res.error);
+        } else {
+          this.props.history.push("/home");
+        }
+      });
   }
 
 	render() {
@@ -53,7 +62,7 @@ class Login extends React.Component {
               </div>
               <div className="row">
                 <div className="col-xs-12">
-                  <button type="submit" className="btn btn-primary">Submit</button>
+                  <button type="submit" onClick={this.getLoginData} className="btn btn-primary">Submit</button>
                 </div>
               </div>
             </form>
@@ -64,4 +73,16 @@ class Login extends React.Component {
 	}
 }
 
-export default Login;
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

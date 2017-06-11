@@ -33,13 +33,16 @@ app.get("/api/users",function(req,res) {
 	});
 });
 
-app.get("/api/users/:email",function(req,res) {
+app.get("/api/users/:email/:password",function(req,res) {
 	let email = req.params.email;
 	users.getUserByEmail(email, function(err, user) {
 		if(err) {
 			throw err;
+		} else if (user && req.params.password == user.password) {
+			res.json(user);
+		} else {
+			res.status(500).json({"error":"Username or password is incorrect"});
 		}
-		res.json(user);
 	});
 });
 
