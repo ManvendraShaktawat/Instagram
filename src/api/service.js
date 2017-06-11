@@ -3,11 +3,11 @@ export function service(method, data, url) {
 		return fetch(url).then(req => req.json());
 	} else {
 		return fetch(url, {
-      headers: {
+        headers: {
 				"Content-Type" : "application/json"
 			},
 			method,
 			body:JSON.stringify(data)
-		}).then(req => req.json());
+		}).then(res => res.json());
 	}
 }
