@@ -20,8 +20,8 @@ const authUser =  function() {
 const routes = (
 	<App>
 		<Switch>
+			<Route name="home" exact path="/" render={authUser} />
 			<Route name="login" exact path="/login" component={Login} />
-			<Route name="home" exact render={authUser} path="/" />
 			<Route name="register" exact path="/register" component={Register} />
 			<Route component={NotFoundPage} />
 		</Switch>
