@@ -26,7 +26,7 @@ class Register extends React.Component {
 
     this.props.actions.post(userData, userUrl.apiNames.USERS)
       .then(() => {
-        this.props.history.push("/home");
+        this.props.history.push("/");
       });
   }
 
@@ -35,7 +35,7 @@ class Register extends React.Component {
       <div className="container">
         <div className="row">
           <div className="l-register col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-            <form>
+            <form className="well">
               <div className="row">
                 <div className="col-xs-6">
                   <InputField

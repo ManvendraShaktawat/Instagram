@@ -1,3 +1,32 @@
+@import "../app/variables.scss";
+
+.l-header-wrapper {
+	height: 60px;
+}
+
 .l-header {
-	
+	padding: 5px;
+	background: $white;
+	box-shadow: 0 8px 6px -6px $grey;
+	border-bottom: 1px solid $grey;
+	position: fixed;
+	z-index: 10;
+	.l-logo {
+		margin-left: 30px;
+		img:first-child {
+			height: 40px;
+		}
+		img:last-child {
+			margin-left: 30px;
+			height: 50px;
+		}
+	}
+	ul {
+		margin: 0;
+		li {
+			padding: 15px;
+			list-style-type: none;
+			display: inline-block;
+		}
+	}
 }

@@ -1,12 +1,7 @@
 @import "./variables.scss";
 
-html, body, #app, #container {
-	height: 100%;
-}
-
-#container > div {
+#mainContainer {
 	background: $lightestBlue;
-	height: 100%;
 }
 
 label {

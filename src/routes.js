@@ -9,8 +9,8 @@ import NotFoundPage from "./components/presentational/notFound/notFoundPage";
 const routes = (
 	<App>
 		<Switch>
-			<Route name="login" exact path="/" component={Login} />
-			<Route name="home" exact path="/home" component={HomePage} />
+			<Route name="home" exact path="/" component={HomePage} />
+			<Route name="login" exact path="/login" component={Login} />
 			<Route name="register" exact path="/register" component={Register} />
 			<Route component={NotFoundPage} />
 		</Switch>
