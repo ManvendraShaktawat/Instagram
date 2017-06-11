@@ -1,3 +1,4 @@
+/*colors*/
 $mingleBlue: #337ab7;
 $mingleRed: #d9534f;
 $mingleGreen: #5cb85c;
@@ -7,3 +8,19 @@ $minglePink: #c31170;
 $lightestBlue: #e9ebee;
 $white: #fff;
 $grey: #dbdbdb;
+$shadowGrey: #aaa;
+$darkGrey: #444;
+
+/*fonts*/
+@font-face {
+  font-family: "DidactGothic";
+  src: url("/assets/fonts/DidactGothic.ttf");
+}
+@font-face {
+  font-family: "FaxSansBeta";
+  src: url("/assets/fonts/FaxSansBeta.otf");
+}
+@font-face {
+  font-family: "GFSDidot-Regular";
+  src: url("/assets/fonts/GFSDidot-Regular.ttf");
+}

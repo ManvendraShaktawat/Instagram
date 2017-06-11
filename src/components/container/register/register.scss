@@ -1,3 +1,5 @@
+@import "../app/variables.scss";
+
 .l-register {
 	margin-top: 32px;
 	margin-bottom: 32px;
@@ -6,10 +8,27 @@
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	h1 {
+		font-family: "FaxSansBeta";
+		text-align: center;
+		margin: 0 0 30px 0;
+		color: $darkGrey;
+	}
 	> .row {
 		margin: 0;
-		> .l-register {
+		> .l-register, .l-login {
 			padding: 0;
 		}
+	}
+}
+.card {
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 1px -1px 20px $shadowGrey;
+	.row:last-child {
+		margin-top: 20px;
+	}
+	label {
+		font-family: "FaxSansBeta";
 	}
 }
