@@ -8,6 +8,6 @@ export function service(method, data, url) {
 			},
 			method,
 			body:JSON.stringify(data)
-		}).then(res => res.json())
+		}).then(res => res.json());
 	}
 }

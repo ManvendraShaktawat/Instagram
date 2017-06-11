@@ -25,8 +25,13 @@ class Register extends React.Component {
     };
 
     this.props.actions.post(userData, userUrl.apiNames.USERS)
-      .then(() => {
-        this.props.history.push("/");
+      .then((res) => {
+        if(res.error) {
+          console.log(res.error);
+        } else {
+          sessionStorage.setItem("user",true);
+          this.props.history.push("/");
+        }
       });
   }
 

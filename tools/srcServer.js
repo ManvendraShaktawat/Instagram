@@ -51,9 +51,10 @@ app.post("/api/users",function(req,res) {
 
 	users.addUsers(user,function(err, users) {
 		if(err) {
-			throw err;
+			res.status(404).json({"error":"Username already exist"});
+		} else {
+			res.json(users);
 		}
-		res.json(users);
 	});
 });
 

@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
 		type:String,
 		required:true
 	},
-  lastName:{
+		lastName:{
 		type:String,
 		required:true
 	},
@@ -13,16 +13,17 @@ const userSchema = mongoose.Schema({
 		type:String,
 		required:true
 	},
-  email:{
+		email:{
+		type:String,
+		required:true,
+		unique:true
+	},
+		gender:{
 		type:String,
 		required:true
 	},
-  gender:{
-		type:String,
-		required:true
-	},
-  dob: String,
-  mobileNumber:String,
+		dob: String,
+		mobileNumber:String,
 });
 
 let users = mongoose.model("users",userSchema);

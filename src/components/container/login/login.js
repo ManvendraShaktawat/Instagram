@@ -20,7 +20,8 @@ class Login extends React.Component {
         if(res.error) {
           console.log(res.error);
         } else {
-          this.props.history.push("/home");
+          sessionStorage.setItem("user",true);
+          this.props.history.push("/");
         }
       });
   }
