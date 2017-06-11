@@ -26,7 +26,7 @@ class Register extends React.Component {
 
     this.props.actions.post(userData, userUrl.apiNames.USERS)
       .then(() => {
-        this.props.history.push("/home");
+        this.props.history.push("/");
       });
   }
 
@@ -34,10 +34,15 @@ class Register extends React.Component {
     return(
       <div className="container">
         <div className="row">
-          <div className="l-register col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-            <form>
+          <div className="l-register offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6 offset-xl-4 col-xl-4">
+            <form className="card">
               <div className="row">
-                <div className="col-xs-6">
+                <div className="col-12">
+                  <h1>Sign up</h1>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12 col-sm-6">
                   <InputField
                     parentContext={this}
                     type="text"
@@ -46,7 +51,7 @@ class Register extends React.Component {
                     label="First Name:"
                   />
                 </div>
-                <div className="col-xs-6">
+                <div className="col-12 col-sm-6">
                   <InputField
                     parentContext={this}
                     type="text"
@@ -57,7 +62,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="email"
@@ -68,7 +73,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="password"
@@ -79,7 +84,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="password"
@@ -90,7 +95,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="form-group col-xs-12">
+                <div className="form-group col-12">
                   <label htmlFor="gender">Gender:</label>
                   <select name="gender" ref={(el)=>{this.gender = el;}} id="gender" className="form-control">
                     <option value="">Select</option>
@@ -100,7 +105,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="date"
@@ -110,7 +115,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="number"
@@ -121,8 +126,8 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
-                  <button type="submit" className="btn btn-primary col-xs-12" onClick={this.getUserData}>Submit</button>
+                <div className="col-12">
+                  <button type="submit" className="btn btn-primary col-12" onClick={this.getUserData}>Submit</button>
                 </div>
               </div>
             </form>

@@ -1,3 +1,92 @@
+@import "../app/variables.scss";
+
+.l-header-wrapper {
+	height: 60px;
+}
+
 .l-header {
-	
+	padding: 5px 30px;
+	background: $white;
+	box-shadow: 0 8px 6px -6px $grey;
+	border-bottom: 1px solid $grey;
+	position: fixed;
+	z-index: 10;
+	.l-logo {
+		img {
+			height: 50px;
+		}
+	}
+	.l-mingle-text {
+		text-align: center;
+		img {
+			height: 50px;
+		}
+	}
+	nav {
+		position: relative;
+		text-align: right;
+		i {
+			color: $mingleBlue;
+			font-size: 24px;
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+		}
+		ul {
+			display: none;
+			margin: 0;
+			position: absolute;
+			right: 0;
+			top: 40px;
+			padding: 5px;
+		    background-color: #fff;
+    		box-shadow: 1px -1px 20px #aaa;
+    		border-radius: 3px;
+			li {
+				padding: 10px 20px;
+				min-width: 150px;
+				list-style-type: none;
+				text-align: center;
+				a {
+					font-family: "FaxSansBeta";
+				    font-size: 18px;
+				    text-decoration: none;
+				}
+			}
+			li:not(:first-child) {
+				border-top: 1px solid $grey;
+			}
+		}
+		.l-display-block {
+			display: block;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.l-header {
+		nav {
+			padding: 0 15px;
+			i {
+				display: none;
+			}
+			ul {
+				display: block;
+				top: 50%;
+				transform: translateY(-50%);
+				box-shadow: none;
+				li {
+					min-width: 0;
+					padding: 0 10px;
+					display: inline-block;
+				}
+				li:not(:first-child) {
+					border: none;
+					border-left: 2px solid $mingleBlue;
+				}
+			}
+		}
+	}
 }

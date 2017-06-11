@@ -29,10 +29,15 @@ class Login extends React.Component {
 		return(
       <div className="container">
         <div className="row">
-          <div className="l-login col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-            <form>
+          <div className="l-login offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6 offset-xl-4 col-xl-4">
+            <form className="card">
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
+                  <h1>Sign in</h1>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="email"
@@ -43,7 +48,7 @@ class Login extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <InputField
                     parentContext={this}
                     type="password"
@@ -54,15 +59,15 @@ class Login extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <div className="checkbox">
                     <label><input type="checkbox" name="remember" /> Remember me</label>
                   </div>
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-12">
-                  <button type="submit" onClick={this.getLoginData} className="btn btn-primary">Submit</button>
+                <div className="col-12">
+                  <button type="submit" onClick={this.getLoginData} className="btn btn-primary col-12">Submit</button>
                 </div>
               </div>
             </form>
