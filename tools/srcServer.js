@@ -11,7 +11,7 @@ import * as users from "./models/users";
 const port = 3000;
 const app = express();
 const compiler = webpack(config);
-mongoose.connect("mongodb://10.207.49.41/mingle");
+mongoose.connect("mongodb://localhost/mingle");
 
 app.use(bodyParser.json());
 
