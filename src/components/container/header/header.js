@@ -23,7 +23,7 @@ class Header extends React.Component {
 								<img src="/assets/images/favicon.ico" />
 							</div>
 							<div className="l-mingle-text col-6 col-sm-4">
-								<img src="/assets/images/mingle8.png" />
+								<img src="/assets/images/mingle.png" />
 							</div>
 							<nav className="col-3 col-sm-4">
 								<i className="fa fa-bars" onClick={this.toggleDropdown}></i>
