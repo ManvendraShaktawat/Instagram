@@ -33,6 +33,16 @@ app.get("/api/users",function(req,res) {
 	});
 });
 
+app.get("/api/users/:name",function(req,res) {
+	let name = req.params.name;
+	users.getSearchUsers(name, function(err, users) {
+		if(err) {
+			throw err;
+		}
+		res.json(users);
+	});
+});
+
 app.get("/api/users/:email/:password",function(req,res) {
 	let email = req.params.email;
 	users.getUserByEmail(email, function(err, user) {

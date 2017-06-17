@@ -1,4 +1,13 @@
 .l-login {
-	margin-top: 32px;
-	margin-bottom: 32px;
+	h1 {
+		margin: 0 0 30px 0;
+	}
+	.card {
+		.row:last-child {
+			margin-top: 20px;
+		}
+		label {
+			font-family: "FaxSansBeta";
+		}
+	}
 }
