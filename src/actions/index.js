@@ -1,6 +1,9 @@
 import __registerUser from "./registerUser";
 export const registerUser = __registerUser;
 
+import __profileUser from "./profileUser";
+export const profileUser = __profileUser;
+
 import {service} from "../api/service";
 
 export function post(data, url) {

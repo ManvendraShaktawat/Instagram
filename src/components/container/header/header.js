@@ -20,7 +20,7 @@ class Header extends React.Component {
 					<div className="l-header col-12">
 						<div className="row">
 							<div className="l-logo col-3 col-sm-4">
-								<img src="/assets/images/favicon.ico" />
+								<img src="/assets/images/mingle-logo.jpg" />
 							</div>
 							<div className="l-mingle-text col-6 col-sm-4">
 								<img src="/assets/images/mingle8.png" />

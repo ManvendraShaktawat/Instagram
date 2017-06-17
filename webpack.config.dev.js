@@ -33,5 +33,9 @@ export default {
         loaders: [ "style-loader", "css-loader", "sass-loader" ]
       }
 		]
+	},
+	node: {
+		net:"empty",
+		dns:"empty"
 	}
 };

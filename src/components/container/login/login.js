@@ -4,6 +4,7 @@ import {bindActionCreators} from "redux";
 import * as actions from "../../../actions";
 import InputField from "../../presentational/inputField/inputField";
 import * as userUrl from "../../../constants/apiNames";
+import jwt from "jsonwebtoken";
 import "./login.scss";
 
 class Login extends React.Component {
@@ -15,12 +16,13 @@ class Login extends React.Component {
 
   getLoginData(event) {
     event.preventDefault();
-    this.props.actions.get(userUrl.apiNames.USERS+"/"+this.email.value+"/"+this.pwd.value)
+    this.props.actions.post({"email":this.email.value, "password": this.pwd.value}, userUrl.apiNames.USERS_AUTH)
       .then((res) => {
         if(res.error) {
           console.log(res.error);
         } else {
-          sessionStorage.setItem("user",true);
+          sessionStorage.setItem("token",res.token);
+          console.log(jwt.decode(res.token)._doc);
           this.props.history.push("/");
         }
       });
