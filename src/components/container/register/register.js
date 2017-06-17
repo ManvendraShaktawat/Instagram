@@ -39,7 +39,7 @@ class Register extends React.Component {
     return(
       <div className="container">
         <div className="row">
-          <div className="l-register offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6 offset-xl-4 col-xl-4">
+          <div className="l-register col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
             <form className="card">
               <div className="row">
                 <div className="col-12">

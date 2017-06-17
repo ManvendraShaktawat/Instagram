@@ -39,3 +39,7 @@ export function getUserByEmail(email, callback) {
 export function addUsers(user,callback){
 	users.create(user,callback);
 }
+
+export function getSearchUsers(name,callback) {
+	users.find({"firstName":{$regex: name, $options: "i"}},callback);
+}

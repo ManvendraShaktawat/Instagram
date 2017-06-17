@@ -1,0 +1,56 @@
+@import "./variables.scss";
+
+.l-padding-none {
+	padding: 0;
+}
+
+.l-margin-none {
+	margin: 0;
+}
+
+#mainContainer {
+	margin-top: 75px;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.row {
+	margin: 0;
+}
+
+h1 {
+	font-family: "FaxSansBeta";
+	text-align: center;
+	color: $darkGrey;
+}
+
+.mingle-dropdown {
+	position: absolute;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 1px -1px 20px #aaa;
+	border-radius: 3px;
+	li {
+		text-align: center;
+		a, span {
+			display: inline-block;
+			padding: 10px 40px;
+			font-family: "FaxSansBeta";
+			font-size: 18px;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	li:not(:first-child) {
+		border-top: 1px solid $grey;
+	}
+}
+
+.card {
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 1px -1px 20px $shadowGrey;
+}

@@ -1,6 +1,9 @@
 import __registerUser from "./registerUser";
 export const registerUser = __registerUser;
 
+import __toggleAuthStatus from "./toggleAuthStatus";
+export const toggleAuthStatus = __toggleAuthStatus;
+
 import {service} from "../api/service";
 
 export function post(data, url) {
