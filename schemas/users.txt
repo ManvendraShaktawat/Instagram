@@ -1,0 +1,27 @@
+[
+	{
+		"_id": "",
+		"firstName": "",
+		"lastName": "",
+		"email": "",
+		"password": "",
+		"gender": "",
+		"dob": "",
+		"phone": "",
+		"profilePictureUrl": "",
+		"friends": {
+			"followers": [
+				{
+					"userId": "",
+					"status": ""
+				}
+			],
+			"following": [
+				{
+					"userId": "",
+					"status": ""
+				}
+			]
+		}
+	}
+]

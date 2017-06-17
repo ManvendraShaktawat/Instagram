@@ -48,3 +48,4 @@ export function addUsers(user,callback){
 	/*let usr = new users(user);
 	usr.save(user,callback);*/
 }
+

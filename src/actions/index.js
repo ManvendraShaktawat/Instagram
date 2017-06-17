@@ -1,8 +1,12 @@
 import __registerUser from "./registerUser";
 export const registerUser = __registerUser;
 
+
 import __profileUser from "./profileUser";
 export const profileUser = __profileUser;
+
+import __toggleAuthStatus from "./toggleAuthStatus";
+export const toggleAuthStatus = __toggleAuthStatus;
 
 import {service} from "../api/service";
 

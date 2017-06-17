@@ -1,0 +1,19 @@
+[
+	{
+		"_id": "",
+		"userId": "",
+		"date": "",
+		"description": "",
+		"mediaUrl": "",
+		"likes": [
+			userId1,
+			userId2
+		],
+		"comments": [
+			{
+				"userId": "",
+				"comment": ""
+			}
+		]
+	}
+]
