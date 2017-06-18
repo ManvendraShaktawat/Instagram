@@ -1,2 +1,4 @@
 export const REGISTER_USER = "REGISTER_USER";
+export const PROFILE_USER = "PROFILE_USER";
 export const TOGGLE_AUTH_STATUS = "TOGGLE_AUTH_STATUS";
+

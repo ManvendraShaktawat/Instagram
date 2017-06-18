@@ -4,6 +4,7 @@ import {bindActionCreators} from "redux";
 import * as actions from "../../../actions";
 import InputField from "../../presentational/inputField/inputField";
 import * as userUrl from "../../../constants/apiNames";
+import jwt from "jsonwebtoken";
 import "./register.scss";
 
 class Register extends React.Component {
@@ -29,7 +30,8 @@ class Register extends React.Component {
         if(res.error) {
           console.log(res.error);
         } else {
-          sessionStorage.setItem("user",true);
+          sessionStorage.setItem("token",res.token);
+          console.log(jwt.decode(res.token)._doc);
           this.props.history.push("/");
         }
       });

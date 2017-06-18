@@ -52,7 +52,7 @@ class Header extends React.Component {
 		let navigationBar,
 				searchBox,
 				logo,
-				isLoggedIn = sessionStorage.getItem("user");
+				isLoggedIn = sessionStorage.getItem("token");
 
 		if(isLoggedIn) {
 			logo = (
